@@ -1,0 +1,32 @@
+.logo {
+    /* Size and display */
+    display: inline-block;
+    width: auto;
+    height: 60px; /* Adjust based on your needs */
+    
+    /* Spacing */
+    margin: 0;
+    padding: 0;
+    
+    /* Image handling */
+    object-fit: contain;
+    vertical-align: middle;
+    
+    /* Transitions for hover effects */
+    transition: transform 0.3s ease;
+    
+  }
+  
+  /* Hover effect */
+  .logo:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    .logo {
+      height: 40px; /* Slightly smaller on mobile devices */
+    }
+  }
+  

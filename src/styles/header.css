@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--bg-primary, #fffdd0);
+    box-shadow: 0 2px 4px rgb(199, 201, 224);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100px;
+  }
+  
+  /* Optional: Add responsive design */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 0.75rem 1rem;
+      flex-direction: column;
+      height: 75px; 
+    }
+  }
+  
