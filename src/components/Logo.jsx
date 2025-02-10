@@ -10,7 +10,7 @@ export default function Logo() {
       }}
     >
       <img
-        src="src/images/halit.jpg"
+        src="/images/halit.jpg"
         alt="Logo"
         style={{
           width: 75, 

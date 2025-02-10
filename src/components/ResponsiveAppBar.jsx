@@ -7,41 +7,44 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './Logo';
 import ColorPicker from './ColorPicker';
 
+const pages = [
+  { name: 'Okul Hayatı', id: 'schoollife' },
+  { name: 'İş Deneyimi', id: 'joblife' },
+  { name: 'Projelerim', id: 'myprojects' },
+  { name: 'İletişim', id: 'contact' }
+];
 
-
-const pages = ['Hakkımda', 'İş Deneyimi', 'Projelerim'];
-
-
-function ResponsiveAppBar({navcolor,setnavColor }) {
+function ResponsiveAppBar({ navcolor, setnavColor }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
- 
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <AppBar position="fixed"sx={{backgroundColor:navcolor}} >
-      <Container maxWidth="xl"  >
+    <AppBar position="fixed" sx={{ backgroundColor: navcolor }}>
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
-        
-          <Typography 
+          <Typography
             variant="h6"
             noWrap
-            component="a"          
+            component="a"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -52,13 +55,13 @@ function ResponsiveAppBar({navcolor,setnavColor }) {
               textDecoration: 'none',
             }}
           >
-            <Logo ></Logo>
+            <Logo />
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="navigation menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -69,64 +72,40 @@ function ResponsiveAppBar({navcolor,setnavColor }) {
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
               keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
+              transformOrigin={{ vertical: 'top', horizontal: 'left' }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                <MenuItem key={page.id} onClick={() => { handleScroll(page.id); handleCloseNavMenu(); }}>
+                  <Typography sx={{ textAlign: 'center' }}>{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-      
-          
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-          
-          </Typography>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                key={page.id}
+                onClick={() => handleScroll(page.id)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
-          <div style={{margin:'7px',padding:'7px'}}>
+
+          <Box sx={{ margin: '7px', padding: '7px' }}>
             <ColorPicker navcolor={navcolor} setnavColor={setnavColor} />
-          </div>
-      
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
   );
 }
+
 export default ResponsiveAppBar;

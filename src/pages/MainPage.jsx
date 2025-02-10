@@ -80,9 +80,9 @@ export default function MainPage({ navcolor, setnavColor }) {
       </Fade>
 
    {/* Okul Başlığı */}
-   <Grid container spacing={2}>
+   <Grid id="schoollife" container spacing={2}>
         <Grid item xs={12}>
-          <h1 style={{ textAlign: "center", color: "orangered" }}>Okul Hayatı</h1>
+          <h1  style={{ textAlign: "center", color: "orangered" }}>Okul Hayatı</h1>
         </Grid>
       </Grid>
 
@@ -99,7 +99,7 @@ export default function MainPage({ navcolor, setnavColor }) {
       </Fade>
 
       {/* İş Deneyimi Başlığı */}
-      <Grid container spacing={2}>
+      <Grid id="joblife" container spacing={2}>
         <Grid item xs={12}>
           <h1 style={{ textAlign: "center", color: "orangered" }}>İş Deneyimi</h1>
         </Grid>
@@ -119,13 +119,13 @@ export default function MainPage({ navcolor, setnavColor }) {
       
 
       {/* MyProjects Bölümü - Scroll ile Fade */}
-      <Fade in={myprojectVisible} timeout={1000}>
+      <Fade id="myprojects" in={myprojectVisible} timeout={1000}>
         <div ref={myprojectRef}>
           <MyProjects />
         </div>
       </Fade>
 
-      <Contact navcolor={navcolor} />
+      <Contact id="contact" navcolor={navcolor} />
       <ScrollToTop />
     </div>
   );

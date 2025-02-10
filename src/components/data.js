@@ -55,7 +55,7 @@ const content = {
         subtitle: "Yönetim Bilişim Sistemleri",
         startDate: "Ekim 2022",
         endDate: "Şubat 2025(Tahmini)",
-        description: "Trakya Üniversitesi Yönetim Bilişim Sistemleri bölümünde öğrenciyim. Bu bölümde, işletmelerin bilgi teknolojileri altyapılarını yönetme, iş süreçlerini analiz etme ve bilgi sistemlerini geliştirme konularında eğitim alıyorum. Ayrıca, veri tabanı yönetimi, yazılım geliştirme, iş analitiği ve bilgi güvenliği gibi konularda bilgi sahibi oluyorum.",
+        description: "Bilgisayar programcılığından dgs ile geçiş yaparak lisans öğrenimini tamamladım. Bu bölümde, işletmelerin bilgi teknolojileri projelerini yönetme, iş süreçlerini analiz etme ve bilgi sistemlerini geliştirme konularında eğitim aldım. Ayrıca, veri tabanı yönetimi, yazılım geliştirme, veri analizi ve muhasebe gibi konularda bilgi sahibi oluyorum.",
              
       },
       {
@@ -65,8 +65,16 @@ const content = {
         
         startDate: "Eylül 2016",
         endDate: "Temmuz 2019",
-        description: " Bilgisayar Programcılığı bölümünde öğrenciydim. Bu bölümde, temel programlama dilleri, algoritma ve veri yapıları, web programlama ve mobil uygulama geliştirme konularında eğitim aldım. Ayrıca, yazılım test etme, veri tabanı yönetimi ve yazılım mühendisliği gibi konularda bilgi sahibi oldum.",
+        description: " Bilgisayar Programcılığı bölümünde öğrenciydim. Bu bölümde, temel programlama dilleri, algoritma ve veri yapıları, web programlama ve mobil uygulama geliştirme konularında eğitim aldım. Ayrıca, yazılım test etme, veri tabanı yönetimi gibi konularda bilgi sahibi oldum.",
         
+      },
+      {
+        id: 3,
+        title: "Çatalca Arif Nihat Asya Mesleki ve Teknik Anadolu Lisesi",
+        subtitle: "Bilişim Teknolojileri",
+        startDate: "Eylül 2012",
+        endDate: "Haziran 2016",
+        description: " Bilişim Teknolojileri alanında eğitim aldığım lisede, temel bilgisayar bilgisi, web tasarımı ve programlama dilleri gibi konularda eğitim aldım. Ayrıca, bilgisayar donanımı ve yazılımı konularında pratik beceriler kazandım.",
       }
   ]
     export { content, jobs , projects,school};

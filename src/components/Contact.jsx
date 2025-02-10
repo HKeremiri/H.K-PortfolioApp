@@ -5,7 +5,7 @@ import {  IconButton } from "@mui/material";
 
 export default function Contact({navcolor}) {
   return (
-    <Box sx={{ textAlign: "center", mt: 5 ,bgcolor:navcolor ,color:'white' ,boxShadow:1}}>
+    <Box id="contact" sx={{ textAlign: "center", mt: 5 ,bgcolor:navcolor ,color:'white' ,boxShadow:1}}>
       <Typography variant="h4" fontWeight="bold"  mb={2}>
         İletişim Bilgileri
       </Typography>
