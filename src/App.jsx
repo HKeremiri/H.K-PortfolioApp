@@ -17,7 +17,7 @@ const[navcolor,setnavColor] = useState("gray");
 
  
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider  theme={theme}>
         <CssBaseline />
        
   <div className="app-background">
