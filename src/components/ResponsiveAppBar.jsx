@@ -11,13 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './Logo';
 import ColorPicker from './ColorPicker';
-
-const pages = [
-  { name: 'Okul Hayatı', id: 'schoollife' },
-  { name: 'İş Deneyimi', id: 'joblife' },
-  { name: 'Projelerim', id: 'myprojects' },
-  { name: 'İletişim', id: 'contact' }
-];
+import { pages } from './data.js';
 
 function ResponsiveAppBar({ navcolor, setnavColor }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

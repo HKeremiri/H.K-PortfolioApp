@@ -77,4 +77,12 @@ const content = {
         description: " Bilişim Teknolojileri alanında eğitim aldığım lisede, temel bilgisayar bilgisi, web tasarımı ve programlama dilleri gibi konularda eğitim aldım. Ayrıca, bilgisayar donanımı ve yazılımı konularında pratik beceriler kazandım.",
       }
   ]
-    export { content, jobs , projects,school};
+
+  const pages = [
+    { name: 'Okul Hayatı', id: 'schoollife' },
+    { name: 'İş Deneyimi', id: 'joblife' },
+    { name: 'Projelerim', id: 'myprojects' },
+    { name: 'İletişim', id: 'contact' }
+  ];
+  
+    export { content, jobs , projects,school,pages};
