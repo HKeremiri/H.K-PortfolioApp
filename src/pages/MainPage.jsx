@@ -68,9 +68,9 @@ export default function MainPage({ navcolor, setnavColor }) {
   
       {/* İlk Fade - Sayfa açıldığında */}
       <Fade in={visible} timeout={1000}>
-        <Grid marginTop={10} container spacing={2}>
+        <Grid id="home" marginTop={10} container spacing={2}>
           
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={8}  >
             <AboutMe />
           </Grid>
           <Grid item xs={12} md={4}>

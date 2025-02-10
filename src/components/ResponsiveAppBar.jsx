@@ -34,20 +34,21 @@ function ResponsiveAppBar({ navcolor, setnavColor }) {
   return (
     <AppBar position="fixed" sx={{ backgroundColor: navcolor }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar  disableGutters>
           <Typography
             variant="h6"
             noWrap
             component="a"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'flex', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
+            onClick={() => handleScroll('home')}
           >
             <Logo />
           </Typography>
@@ -90,9 +91,9 @@ function ResponsiveAppBar({ navcolor, setnavColor }) {
               >
                 {page.name}
               </Button>
-            ))}
+            ))}            
           </Box>
-
+         
           <Box sx={{ margin: '7px', padding: '7px' }}>
             <ColorPicker navcolor={navcolor} setnavColor={setnavColor} />
           </Box>

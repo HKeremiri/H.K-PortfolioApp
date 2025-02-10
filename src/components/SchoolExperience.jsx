@@ -9,7 +9,7 @@ function SchoolExperience({ school }) {
       '&:hover': {
         boxShadow: 3,
         borderColor: 'secondary.main',
-      }, mx: { xs: 0, md: "10%" } }}>
+      }, mx: { xs: 2, md: "10%" } }}>
       <CardContent>
         <Grid container spacing={2} alignItems="center">
           <Grid item>

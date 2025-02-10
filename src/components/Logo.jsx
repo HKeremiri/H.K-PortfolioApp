@@ -21,7 +21,7 @@ export default function Logo() {
         }}
       />
       <Typography variant="h6" fontWeight="bold">
-        Halit Kerem İri
+        Halit Kerem
       </Typography>
     </Box>
   );

@@ -1,7 +1,7 @@
 const content = {
     title: "Full Stack Developer",
     subtitle: "Hakkımda",
-    description: "Yönetim Bilişim Sistemleri öğrencisiyim. ASP.NET Core ile çeşitli projeler geliştirme deneyimim bulunmakta ve web programlama konusunda orta seviyedeyim. Frontend'de .Net Mvc Razor Pages kullanıyorum ve şuanda React üzerinde çalışıyorum. Ayrıca temel düzeyde Android uygulamaları geliştirebiliyor ve bu alanda kendimi daha da geliştirmek için çalışıyorum. Teknoloji ve yazılım alanındaki yetkinliklerimi, iş süreçlerini optimize eden ve yenilikçi çözümler sunan projelere dönüştürmek istiyorum.",
+    description: "Yönetim Bilişim Sistemleri öğrencisiyim. ASP.NET Core ile çeşitli projeler geliştirme deneyimim bulunmakta ve web programlama konusunda orta seviyedeyim. Frontend'de .Net Mvc Razor Pages kullanıyorum ve şu anda React üzerinde çalışıyorum. Ayrıca temel düzeyde Android uygulamaları geliştirebiliyor ve bu alanda kendimi daha da geliştirmek için çalışıyorum. Teknoloji ve yazılım alanındaki yetkinliklerimi, iş süreçlerini optimize eden ve yenilikçi çözümler sunan projelere dönüştürmek istiyorum.",
     myskill: "Yeteneklerim",
     skills: ["React", ".Net Core", "Ef Core", "Android Programlama", "C#", "Kotlin", "Sql", "NoSql", "Restful Api","MVC","N Tier Mimari","Dapper","JavaScript","AutoMapper","Entity Framework","Bootstrap","Html","Css","Github","Visual Studio","Visual Studio Code","Android Studio","Swagger", "Firebase", "MsSql", "SQLite", "MongoDB"]
   };

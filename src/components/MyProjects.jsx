@@ -9,7 +9,7 @@ export default function MyProjects() {
         Projelerim
       </Typography>
       
-      <Grid container spacing={10}>
+      <Grid container   spacing={{ xs: 10, sm: 4, md: 6, lg: 10 }}   >
         {projects.map((project) => (
           <Grid item xs={12} sm={12} md={6} key={project.id} sx={{textAlign:"center" , }}  >
             <Card sx={{ boxShadow: 3, borderRadius: 2, backgroundColor:"#f2f2f2",
