@@ -12,10 +12,11 @@ import MenuItem from '@mui/material/MenuItem';
 import Logo from './Logo';
 import ColorPicker from './ColorPicker';
 import { pages } from './data.js';
+import LanguageSwitcher from './LanguageSwitcher.jsx';
 
-function ResponsiveAppBar({ navcolor, setnavColor }) {
+function ResponsiveAppBar({ navcolor, setnavColor, setLanguage, language, data }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-
+  const {pages} = data
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -95,6 +96,9 @@ function ResponsiveAppBar({ navcolor, setnavColor }) {
           </Box>
          
           <Box sx={{ margin: '7px', padding: '7px' }}>
+            <LanguageSwitcher setLanguage={setLanguage} language={language}></LanguageSwitcher>
+          </Box>          
+            <Box sx={{ margin: '7px', padding: '7px' }}>
             <ColorPicker navcolor={navcolor} setnavColor={setnavColor} />
           </Box>
         </Toolbar>

@@ -6,6 +6,28 @@ const content = {
     skills: ["React", ".Net Core", "Ef Core", "Android Programlama", "C#", "Kotlin", "Sql", "NoSql", "Restful Api","MVC","N Tier Mimari","Dapper","JavaScript","AutoMapper","Entity Framework","Bootstrap","Html","Css","Github","Visual Studio","Visual Studio Code","Android Studio","Swagger", "Firebase", "MsSql", "SQLite", "MongoDB"]
   };
   
+  const contact = {
+  title: "İletişim Bilgileri",
+  phone: {
+    label: "+90 542 668 41 81",
+    icon: "Phone"
+  },
+  email: {
+    address: "halit_iri_@hotmail.com",
+    icon: "Email"
+  },
+  github: {
+    username: "HKeremiri",
+    url: "https://github.com/HKeremiri",
+    icon: "GitHub"
+  },
+  linkedin: {
+    label: "linkedin.com/halit-kerem-iri",
+    url: "https://www.linkedin.com/in/halit-kerem-iri-0a6a25252/",
+    icon: "LinkedIn"
+  }
+};
+
 
   const jobs = [
     {
@@ -54,7 +76,7 @@ const content = {
         title: "Trakya Üniversitesi",
         subtitle: "Yönetim Bilişim Sistemleri",
         startDate: "Ekim 2022",
-        endDate: "Şubat 2025(Tahmini)",
+        endDate: "Haziran 2025",
         description: "Bilgisayar programcılığından dgs ile geçiş yaparak lisans öğrenimini tamamladım. Bu bölümde, işletmelerin bilgi teknolojileri projelerini yönetme, iş süreçlerini analiz etme ve bilgi sistemlerini geliştirme konularında eğitim aldım. Ayrıca, veri tabanı yönetimi, yazılım geliştirme, veri analizi ve muhasebe gibi konularda bilgi sahibi oluyorum.",
              
       },
@@ -85,4 +107,4 @@ const content = {
     { name: 'İletişim', id: 'contact' }
   ];
   
-    export { content, jobs , projects,school,pages};
+    export { content, jobs , projects,school,pages,contact};

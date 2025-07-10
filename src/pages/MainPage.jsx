@@ -4,22 +4,25 @@ import Fade from '@mui/material/Fade';
 
 import AboutMe from "../components/AboutMe";
 import Contact from "../components/Contact";
-import Header from "../components/Header";
 import MyProjects from "../components/MyProjects";
 import JobExperience from "../components/JobExperience";
 import MyPhoto from "../components/MyPhoto";
 import ScrollToTop from "../components/ScrollToTop";
-import  {jobs}  from "../components/data";
-import {school} from "../components/data";
-import SchoolExperience from "../components/SchoolExperience";
 
-export default function MainPage({ navcolor, setnavColor }) {
+import SchoolExperience from "../components/SchoolExperience";
+import { contact } from "../components/data-en";
+
+export default function MainPage({ navcolor, setnavColor, language,  data}) {
   const [visible, setVisible] = useState(false);
   const [jobsVisible, setJobsVisible] = useState(false); // İş deneyimi için görünürlük kontrolü
   const [myprojectVisible, setMyProjectVisible] = useState(false); // MyProjects görünürlüğü
 
   const jobsRef = useRef(null); // İş deneyimi kısmını takip edecek ref
   const myprojectRef = useRef(null); // MyProjects kısmını takip edecek ref
+ const { content, jobs, school, projects, pages } = data;
+
+
+
 
   useEffect(() => {
     // Sayfa yüklendiğinde ilk bölümü göster
@@ -71,7 +74,7 @@ export default function MainPage({ navcolor, setnavColor }) {
         <Grid id="home" marginTop={10} container spacing={2}>
           
           <Grid item xs={12} md={8}  >
-            <AboutMe />
+            <AboutMe content={content} />
           </Grid>
           <Grid item xs={12} md={4}>
             <MyPhoto />
@@ -121,11 +124,11 @@ export default function MainPage({ navcolor, setnavColor }) {
       {/* MyProjects Bölümü - Scroll ile Fade */}
       <Fade id="myprojects" in={myprojectVisible} timeout={1000}>
         <div ref={myprojectRef}>
-          <MyProjects />
+          <MyProjects projects={projects} />
         </div>
       </Fade>
 
-      <Contact id="contact" navcolor={navcolor} />
+      <Contact id="contact" navcolor={navcolor} contact={contact} />
       <ScrollToTop />
     </div>
   );

@@ -2,7 +2,6 @@ import { Box, Typography, Container, Grid } from "@mui/material";
 import { color } from "@mui/system";
 import PropTypes from 'prop-types';
 import { useMemo } from 'react';
-import {content} from './data.js';
 
 const styles = {
   wrapper: {
@@ -73,9 +72,9 @@ SkillsList.propTypes = {
   skills: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
-export default function AboutMe() {
+export default function AboutMe({content}) {
   
-  const memoizedContent = useMemo(() => content, []);
+  const memoizedContent = useMemo(() => content, [content]);
 
   return (
     <Container component="section">

@@ -1,8 +1,7 @@
 import { Box, Grid, Card, CardContent, CardMedia, Typography, Button, Container } from "@mui/material";
 
-import {projects} from './data.js';
 
-export default function MyProjects() {
+export default function MyProjects({projects}) {
   return (
     <Container maxWidth="lg">
       <Typography variant="h4" fontWeight="bold" color="orangered" sx={{ textAlign: "center", mb: 4 }}>
