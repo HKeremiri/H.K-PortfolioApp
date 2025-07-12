@@ -85,7 +85,7 @@ export default function MainPage({ navcolor, setnavColor, language,  data}) {
    {/* Okul Başlığı */}
    <Grid id="schoollife" container spacing={2}>
         <Grid item xs={12}>
-          <h1  style={{ textAlign: "center", color: "orangered" }}>Okul Hayatı</h1>
+          <h1  style={{ textAlign: "center", color: "orangered" }}>{pages.find(p => p.id === "schoollife")?.name}</h1>
         </Grid>
       </Grid>
 
@@ -104,7 +104,7 @@ export default function MainPage({ navcolor, setnavColor, language,  data}) {
       {/* İş Deneyimi Başlığı */}
       <Grid id="joblife" container spacing={2}>
         <Grid item xs={12}>
-          <h1 style={{ textAlign: "center", color: "orangered" }}>İş Deneyimi</h1>
+          <h1 style={{ textAlign: "center", color: "orangered" }}>{pages.find(p => p.id === "joblife")?.name}</h1>
         </Grid>
       </Grid>
 
@@ -124,7 +124,7 @@ export default function MainPage({ navcolor, setnavColor, language,  data}) {
       {/* MyProjects Bölümü - Scroll ile Fade */}
       <Fade id="myprojects" in={myprojectVisible} timeout={1000}>
         <div ref={myprojectRef}>
-          <MyProjects projects={projects} />
+          <MyProjects projects={projects} pages={pages} language={language}/>
         </div>
       </Fade>
 

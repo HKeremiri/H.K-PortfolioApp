@@ -1,11 +1,11 @@
 import { Box, Grid, Card, CardContent, CardMedia, Typography, Button, Container } from "@mui/material";
 
 
-export default function MyProjects({projects}) {
+export default function MyProjects({projects, pages,language}) {
   return (
     <Container maxWidth="lg">
       <Typography variant="h4" fontWeight="bold" color="orangered" sx={{ textAlign: "center", mb: 4 }}>
-        Projelerim
+        {pages.find(p => p.id === "myprojects")?.name}
       </Typography>
       
       <Grid container   spacing={{ xs: 10, sm: 4, md: 6, lg: 10 }}   >
@@ -31,7 +31,7 @@ export default function MyProjects({projects}) {
                   href={project.link}
                   target="_blank"
                 >
-                  Projeyi Gör
+                    {language === 'tr' ? 'Projeyi Gör' : 'View Project'}
                 </Button>
               </CardContent>
             </Card>

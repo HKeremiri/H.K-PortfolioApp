@@ -41,7 +41,7 @@ const jobs = [
   {
     id: 1,
     jobTitle: "Software Developer (Intern)",
-    companyName: "Galaksity Smart City Technologies",
+    companyName: "Galaksity Smart City Technologies Inc.",
     startDate: "July 2024",
     endDate: "September 2024",
     description:
@@ -50,7 +50,7 @@ const jobs = [
   {
     id: 2,
     jobTitle: "Technical Service Staff",
-    companyName: "Can Bilgisayar",
+    companyName: "Can Computers",
     startDate: "June 2019",
     endDate: "August 2019",
     description:
